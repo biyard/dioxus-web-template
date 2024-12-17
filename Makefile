@@ -29,10 +29,10 @@ setup.tool:
 	npm i -g tailwindcss
 
 run: public/tailwind.css
-	$(BUILD_ENV) dx serve --addr 0.0.0.0
+	$(BUILD_ENV) dx serve --addr 0.0.0.0 --platform web
 
 build-lambda: public/tailwind.css
-	$(BUILD_ENV) dx build --release --server-features lambda
+	$(BUILD_ENV) dx build --release --fullstack --client-features web-release --server-features lambda
 
 public/tailwind.css:
 	tailwindcss -i ./public/input.css -o ./public/tailwind.css --minify

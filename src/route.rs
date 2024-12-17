@@ -58,7 +58,7 @@ impl std::str::FromStr for Language {
         match s {
             "ko" => Ok(Language::Ko),
             "en" => Ok(Language::En),
-            _ => Err(format!("Invalid language: {}", s)),
+            _ => Ok(Language::Ko),
         }
     }
 }

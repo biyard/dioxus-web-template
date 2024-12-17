@@ -10,7 +10,7 @@ fn main() {
     let conf = config::get();
     dioxus_logger::init(conf.log_level).expect("failed to init logger");
 
-    dioxus_aws::launch(app);
+    dioxus::launch(app);
 }
 
 fn app() -> Element {

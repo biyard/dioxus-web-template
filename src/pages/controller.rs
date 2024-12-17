@@ -1,4 +1,4 @@
-use dioxus::prelude::*;
+use dioxus_aws::prelude::*;
 
 #[derive(Debug, Clone, Copy)]
 pub struct Controller {
